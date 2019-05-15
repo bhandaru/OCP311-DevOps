@@ -49,24 +49,24 @@ Ansible requires that hosts be reachable without intervention. For this training
 ```
 If everything is configured properly, you should see something like the following:
 ```
+docker | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
 node1 | SUCCESS => {
-    "changed": false,
+    "changed": false, 
     "ping": "pong"
 }
 node2 | SUCCESS => {
-    "changed": false,
+    "changed": false, 
     "ping": "pong"
 }
 node3 | SUCCESS => {
-    "changed": false,
-    "ping": "pong"
-}
-docker | SUCCESS => {
-    "changed": false,
+    "changed": false, 
     "ping": "pong"
 }
 master | SUCCESS => {
-    "changed": false,
+    "changed": false, 
     "ping": "pong"
 }
 ```
@@ -76,14 +76,20 @@ master | SUCCESS => {
 ```
 The output should be similar to the sample output below.
 ```
+docker | SUCCESS | rc=0 >>
+ 10:53:08 up 49 min,  1 user,  load average: 0.00, 0.01, 0.05
+
 node2 | SUCCESS | rc=0 >>
- 15:29:00 up 38 min,  1 user,  load average: 0.07, 0.08, 0.08
+ 10:53:08 up 49 min,  1 user,  load average: 0.55, 0.62, 0.77
+
+node3 | SUCCESS | rc=0 >>
+ 10:53:08 up 49 min,  1 user,  load average: 1.56, 1.36, 1.20
 
 node1 | SUCCESS | rc=0 >>
- 15:29:00 up 38 min,  1 user,  load average: 0.27, 0.15, 0.15
+ 10:53:08 up 49 min,  1 user,  load average: 0.43, 1.26, 1.64
 
 master | SUCCESS | rc=0 >>
- 15:29:00 up 38 min,  1 user,  load average: 0.55, 0.62, 0.77
+ 10:53:09 up 48 min,  1 user,  load average: 11.11, 11.06, 13.03
 ```
 Review your results to ensure it matches the sample output above, confirming that ansible is working properly and your OpenShift virtual machines are reachable before proceeding.
 
