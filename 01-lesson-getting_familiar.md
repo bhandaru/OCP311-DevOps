@@ -57,6 +57,14 @@ node2 | SUCCESS => {
     "changed": false,
     "ping": "pong"
 }
+node3 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+docker | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
 master | SUCCESS => {
     "changed": false,
     "ping": "pong"
