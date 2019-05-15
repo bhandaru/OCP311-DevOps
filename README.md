@@ -1,4 +1,4 @@
-# ocp310_for_operations
+# ocp311_for_operations
 This is a Red Hat OpenShift Container Platform workshop targeted at pre-sales and technical partners. 
 
 This training is designed to give you, gentle reader, an infrastructure-centric experience installing Red Hat OpenShift Container Platform. Those with Red Hat Enterprise Linux and open source familiarity will feel right at home.
