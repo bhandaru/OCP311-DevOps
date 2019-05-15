@@ -54,7 +54,7 @@ Copy and paste the following content into `/etc/ansiible/hosts` file. Ensure you
 ```
 # 20180821 -- begin OpenShift inventory file
 #
-# ansible inventory for OpenShift Container Platform  3.11.69
+# ansible inventory for OpenShift Container Platform  3.11.98
 #
 
 [all:vars]
@@ -155,18 +155,6 @@ openshift_storage_glusterfs_block_deploy=false
 #openshift_storage_glusterfs_block_storageclass=true
 #openshift_storage_glusterfs_block_storageclass_default=false
 
-#
-# Enable Glusterfs S3 (Tech Preview)
-#
-#openshift_storage_glusterfs_s3_deploy=true
-#openshift_storage_glusterfs_s3_account=s3testvolume
-#openshift_storage_glusterfs_s3_user=s3adminuser
-#openshift_storage_glusterfs_s3_password=s3adminpass
-#openshift_storage_glusterfs_s3_pvc=dynamic
-## size (Gi) of glusterfs backed PVC used for S3 object data storage
-#openshift_storage_glusterfs_s3_pvc_size=2
-## size (gi) of glusterfs backed PVC used for S3 object metadata storage
-#openshift_storage_glusterfs_s3_meta_pvc_size=1
 
 # GlusterFS version
 #  Complete OpenShift GlusterFS Configuration README
@@ -185,11 +173,6 @@ openshift_storage_glusterfs_block_image="registry.access.redhat.com/rhgs3/rhgs-g
 # Container image to use for heketi pods
 openshift_storage_glusterfs_heketi_image="registry.access.redhat.com/rhgs3/rhgs-volmanager-rhel7:v3.11"
 
-## If using a dedicated glusterfs_registry cluster
-# openshift_storage_glusterfs_registry_version=v3.11
-# openshift_storage_glusterfs_registry_block_version=v3.11
-# openshift_storage_glusterfs_registry_s3_version=v3.11
-# openshift_storage_glusterfs_registry_heketi_version=v3.11
 
 ###########################################################################
 ### OpenShift Master Vars
@@ -210,10 +193,8 @@ openshift_master_cluster_public_hostname=YOUR_MASTER_PUBLIC_IP_ADDRESS.xip.io
 
 # NOTE: Default wildcard domain for applications
 #openshift_master_default_subdomain=cloud.example.com
-openshift_master_default_subdomain=129.146.149.27.xip.io
+openshift_master_default_subdomain=YOUR_MASTER_PUBLIC_IP_ADDRESS.xip.io
 
-# Audit log
-# openshift_master_audit_config={"enabled": true, "auditFilePath": "/var/log/openpaas-oscp-audit/openpaas-oscp-audit.log", "maximumFileRetentionDays": 14, "maximumFileSizeMegabytes": 500, "maximumRetainedFiles": 5}
 
 ###########################################################################
 ### OpenShift Network Vars
@@ -381,7 +362,6 @@ nodes
 glusterfs
 
 [masters]
-#master.example.com
 master.example.com openshift_public_hostname=YOUR_MASTER_PUBLIC_IP_ADDRESS.xip.io openshift_ip=10.0.0.15 openshift_public_ip=YOUR_MASTER_PUBLIC_IP_ADDRESS
 
 [etcd]
@@ -394,16 +374,10 @@ master.example.com openshift_node_group_name='node-config-master-infra' openshif
 ## No dedicated infranodes in my setup
 ## infranode1.example.com openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
 
-## These are regular App nodes
-##node1.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-##node2.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-##node3.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-
 ## These are regular App nodes with OCS hyperconverged
 node1.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 node2.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 node3.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-
 
 [glusterfs]
 node1.example.com glusterfs_devices='[ "{{ myGlusterDev }}" ]'
