@@ -35,6 +35,8 @@ ssh student@<workstation IP>
 master
 node1
 node2
+node3
+docker
 ```
 
 This file allows you to manage your OpenShift environment with ansible. Ansible allows us to easily execute time-consuming commands in parallel during our workshop, among other advantages.
