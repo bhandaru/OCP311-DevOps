@@ -19,6 +19,8 @@ Your instructor will grant you a hosted environment with virtual hardware. The e
 | Master (master.example.com) | This machine will host the OpenShift master. |
 | Node1 (node1.example.com) | This machine will host one OpenShift node. |
 | Node2 (node2.example.com) | This machine will host one OpenShift node. |
+| Node3 (node3.example.com) | This machine will host one OpenShift node. |
+| Docker (docker.example.com) | This machine will host running docker registry |
 | Core (core.example.com) | This machine will host DNS, software repositories, and other services needed for the training environment. Modifying this machine is unnecessary. |
 
 **Begin Lab**
