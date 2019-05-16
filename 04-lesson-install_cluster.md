@@ -79,6 +79,43 @@ sys	    0m16.366s
 
 This takes about 60 minutes to complete. At the end of it, the output should be as below:
 ```
+PLAY RECAP **************************************************************************************************************************************************************
+localhost                  : ok=12   changed=0    unreachable=0    failed=0   
+master.example.com         : ok=885  changed=324  unreachable=0    failed=1   
+node1.example.com          : ok=128  changed=36   unreachable=0    failed=0   
+node2.example.com          : ok=127  changed=36   unreachable=0    failed=0   
+node3.example.com          : ok=127  changed=36   unreachable=0    failed=0   
+
+
+INSTALLER STATUS ********************************************************************************************************************************************************
+Initialization               : Complete (0:00:55)
+Health Check                 : Complete (0:00:27)
+Node Bootstrap Preparation   : Complete (0:04:59)
+etcd Install                 : Complete (0:01:33)
+Master Install               : Complete (0:08:50)
+Master Additional Install    : Complete (0:02:15)
+Node Join                    : Complete (0:01:30)
+GlusterFS Install            : Complete (0:07:16)
+Hosted Install               : Complete (0:02:00)
+Cluster Monitoring Operator  : Complete (0:01:05)
+Web Console Install          : Complete (0:00:43)
+Console Install              : Complete (0:00:40)
+Metrics Install              : In Progress (0:07:22)
+	This phase can be restarted by running: playbooks/openshift-metrics/config.yml
+
+
+Failure summary:
+
+
+  1. Hosts:    master.example.com
+     Play:     OpenShift Metrics
+     Task:     remove Hawkular Agent (HOSA) components
+     Message:  non-zero return code
+
+real	39m45.512s
+user	14m31.588s
+sys	5m41.406s
+
 ```
 Errors occurring during the installation will appear in bright red. Provided the installation completed successfully, now proceed to test and interact with the environment.
 
