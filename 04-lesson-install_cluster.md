@@ -81,36 +81,31 @@ This takes about 60 minutes to complete. At the end of it, the output should be 
 ```
 PLAY RECAP **************************************************************************************************************************************************************
 localhost                  : ok=12   changed=0    unreachable=0    failed=0   
-master.example.com         : ok=885  changed=324  unreachable=0    failed=1   
+master.example.com         : ok=885  changed=324  unreachable=0    failed=0   
 node1.example.com          : ok=128  changed=36   unreachable=0    failed=0   
 node2.example.com          : ok=127  changed=36   unreachable=0    failed=0   
 node3.example.com          : ok=127  changed=36   unreachable=0    failed=0   
 
 
 INSTALLER STATUS ********************************************************************************************************************************************************
-Initialization               : Complete (0:00:55)
-Health Check                 : Complete (0:00:27)
-Node Bootstrap Preparation   : Complete (0:04:59)
-etcd Install                 : Complete (0:01:33)
-Master Install               : Complete (0:08:50)
-Master Additional Install    : Complete (0:02:15)
-Node Join                    : Complete (0:01:30)
-GlusterFS Install            : Complete (0:07:16)
-Hosted Install               : Complete (0:02:00)
-Cluster Monitoring Operator  : Complete (0:01:05)
-Web Console Install          : Complete (0:00:43)
-Console Install              : Complete (0:00:40)
-Metrics Install              : In Progress (0:07:22)
-	This phase can be restarted by running: playbooks/openshift-metrics/config.yml
+Initialization                 : Complete (0:00:00)
+Health Check                   : Complete (0:00:01)
+etcd Install                   : Complete (0:00:00)
+Node Bootstrap Preparation     : Complete (0:00:00)
+Master Install                 : Complete (0:00:00)
+Master Additional Install      : Complete (0:00:00)
+Node Join                      : Complete (0:00:00)
+Hosted Install                 : Complete (0:00:07)
+Cluster Monitoring Operator    : Complete (0:00:01)
+Web Console Install            : Complete (0:00:01)
+Console Install                : Complete (0:00:01)
+Metrics Install                : Complete (0:00:01)
+metrics-server Install         : Complete (0:00:01)
+Logging Install                : Complete (0:00:01)
+Service Catalog Install        : Complete (0:00:01)
+OLM Install                    : Complete (0:00:00)
+Node Problem Detector Install  : Complete (0:00:00)
 
-
-Failure summary:
-
-
-  1. Hosts:    master.example.com
-     Play:     OpenShift Metrics
-     Task:     remove Hawkular Agent (HOSA) components
-     Message:  non-zero return code
 
 real	39m45.512s
 user	14m31.588s
