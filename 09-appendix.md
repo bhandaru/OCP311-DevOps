@@ -8,6 +8,17 @@ Our lab has already populated the hosts with passwordless ssh keys. These keys c
 [student@workstation ~]$ for i in master node1 node2; do ssh-copy-id root@$i; done
 ```
 
+**Free up the /dev/vdc disk used by gluster**
+Execute the following from workstation as root
+```
+for i in node1 node2 node3
+do
+echo $i
+sudo ssh $i "lvm vgremove -f \$(vgs | grep vg_ | awk '{print $1}')"
+sudo ssh $i "wipefs -a /dev/vdc"
+done
+```
+
 **Contributors**
 ```
 Mark Seida
