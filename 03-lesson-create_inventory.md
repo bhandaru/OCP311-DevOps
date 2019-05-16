@@ -368,7 +368,7 @@ master.example.com openshift_node_group_name='node-config-master-infra' openshif
 ## infranode1.example.com openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
 
 ## These are regular App nodes with OCS hyperconverged
-node1.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node1.example.com openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
 node2.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 node3.example.com openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 
