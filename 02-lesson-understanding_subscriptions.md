@@ -1,4 +1,5 @@
-# Lesson Two: Prep the workstation Understanding Subscriptions and Software Repositories
+# Lesson Two: Prep the workstation 
+# Understanding Subscriptions and Software Repositories
 
 OpenShift is built on top of Red Hat Enterprise Linux. The installation procedure adds additional software repositories and leverages an ansible inventory file as a centralized place to configure and automate the installation of OpenShift across multiple machines.
 
