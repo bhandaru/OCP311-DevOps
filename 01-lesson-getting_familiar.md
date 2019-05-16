@@ -85,4 +85,4 @@ master | SUCCESS | rc=0 >>
 ```
 Review your results to ensure it matches the sample output above, confirming that ansible is working properly and your OpenShift virtual machines are reachable before proceeding.
 
-[Lesson Two: Understanding Subscriptions and Software Repositories](02-lesson-understanding_subscriptions.md)
+[Lesson Two: Prep the workstation](02-lesson-understanding_subscriptions.md)
