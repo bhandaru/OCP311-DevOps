@@ -35,12 +35,19 @@ kube-system                                        Active
 management-infra                                   Active
 openshift                                          Active
 openshift-ansible-service-broker                   Active
+openshift-console                                  Active
 openshift-infra                                    Active
 openshift-logging                                  Active
+openshift-metrics-server                           Active
+openshift-monitoring                               Active
 openshift-node                                     Active
+openshift-node-problem-detector                    Active
 openshift-sdn                                      Active
+openshift-storage                                  Active
 openshift-template-service-broker                  Active
 openshift-web-console                              Active
+operator-lifecycle-manager                         Active
+
 ```
 
 Your output should look similar to the above. 
