@@ -1,4 +1,4 @@
-# Lesson Eight: Creating a Sample Application via the Web UI
+# Lesson Six: Creating a Sample Application via the Web UI
 
 We created a user in the previous lesson, cleverly named `user`. Now we will deploy a sample application that leverages an existing container image and also builds another container via source code. For this example, we’re adapting a lesson from https://learn.openshift.com. 
 
