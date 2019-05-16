@@ -36,7 +36,7 @@ workstation.example.com
 
 You should see an output like below.
 ```
-PLAY RECAP **************************************************************************************************************************************************************
+PLAY RECAP ******************************************************************************************************************************
 workstation.example.com    : ok=6    changed=3    unreachable=0    failed=0   
 
 
@@ -53,7 +53,7 @@ sys	0m4.643s
 
 You should see an output like below.
 ```
-PLAY RECAP **************************************************************************************************************************************************************
+PLAY RECAP ******************************************************************************************************************************
 master.example.com         : ok=11   changed=6    unreachable=0    failed=0   
 node1.example.com          : ok=11   changed=6    unreachable=0    failed=0   
 node2.example.com          : ok=11   changed=6    unreachable=0    failed=0   
@@ -79,7 +79,7 @@ sys	    0m16.366s
 
 This takes about 60 minutes to complete. At the end of it, the output should be as below:
 ```
-PLAY RECAP **************************************************************************************************************************************************************
+PLAY RECAP ******************************************************************************************************************************
 localhost                  : ok=12   changed=0    unreachable=0    failed=0   
 master.example.com         : ok=885  changed=324  unreachable=0    failed=0   
 node1.example.com          : ok=128  changed=36   unreachable=0    failed=0   
@@ -87,29 +87,30 @@ node2.example.com          : ok=127  changed=36   unreachable=0    failed=0
 node3.example.com          : ok=127  changed=36   unreachable=0    failed=0   
 
 
-INSTALLER STATUS ********************************************************************************************************************************************************
-Initialization                 : Complete (0:00:55)
-Health Check                   : Complete (0:00:30)
-Node Bootstrap Preparation     : Complete (0:04:38)
-etcd Install                   : Complete (0:01:37)
-Master Install                 : Complete (0:08:44)
-Master Additional Install      : Complete (0:02:16)
-Node Join                      : Complete (0:01:39)
-GlusterFS Install              : Complete (0:07:15)
-Hosted Install                 : Complete (0:02:24)
-Cluster Monitoring Operator    : Complete (0:01:36)
-Web Console Install            : Complete (0:00:40)
-Console Install                : Complete (0:00:40)
-Metrics Install                : Complete (0:05:59)
-metrics-server Install         : Complete (0:02:34)
-Logging Install                : Complete (0:10:11)
-Service Catalog Install        : Complete (0:09:53)
-OLM Install                    : Complete (0:02:26)
-Node Problem Detector Install  : Complete (0:00:37)
+INSTALLER STATUS ************************************************************************************************************
+Initialization                 : Complete (0:00:42)
+Health Check                   : Complete (0:00:37)
+Node Bootstrap Preparation     : Complete (0:05:08)
+etcd Install                   : Complete (0:01:28)
+Master Install                 : Complete (0:07:35)
+Master Additional Install      : Complete (0:01:54)
+Node Join                      : Complete (0:01:09)
+GlusterFS Install              : Complete (0:05:11)
+Hosted Install                 : Complete (0:01:42)
+Cluster Monitoring Operator    : Complete (0:01:27)
+Web Console Install            : Complete (0:00:49)
+Console Install                : Complete (0:00:35)
+Metrics Install                : Complete (0:04:57)
+metrics-server Install         : Complete (0:01:38)
+Logging Install                : Complete (0:07:36)
+Service Catalog Install        : Complete (0:05:21)
+OLM Install                    : Complete (0:01:27)
+Node Problem Detector Install  : Complete (0:00:22)
 
-real	65m3.151s
-user	22m14.857s
-sys	8m17.456s
+real	50m0.475s
+user	15m43.128s
+sys	6m23.044s
+
 
 ```
 Errors occurring during the installation will appear in bright red. Provided the installation completed successfully, now proceed to test and interact with the environment.
