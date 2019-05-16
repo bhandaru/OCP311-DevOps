@@ -14,11 +14,11 @@ Mark Seida
 Christoph Doerbeck
 Gordon Keegan
 Justin Pittman
+Banu Bhandaru
 ```
 **Testing, formatting, and support**
 ```
 Gareth Jenkins
-Banu Bhandaru
 Matthew Ward
 Yvonne Herman
 Matt St. Onge
