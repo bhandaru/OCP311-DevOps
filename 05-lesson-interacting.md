@@ -1,4 +1,4 @@
-# Lesson Seven: Interacting With Your Installation
+# Lesson Five: Interacting With Your Installation
 
 The prior lessons build on each other. If there’s an issue along the way, it’s very unlikely the OpenShift cluster will be installed. All errors should be investigated, and many can be addressed in the inventory file.
 
@@ -11,6 +11,7 @@ NAME                 STATUS    ROLES          AGE       VERSION
 master.example.com   Ready     infra,master   1h        v1.10.0+b81c8f8
 node1.example.com    Ready     compute        1h        v1.10.0+b81c8f8
 node2.example.com    Ready     compute        1h        v1.10.0+b81c8f8
+node3.example.com    Ready     compute        1h        v1.10.0+b81c8f8
 ```
 
 2. Run the following to get additional information about the cluster.
@@ -20,6 +21,7 @@ NAME                 STATUS    ROLES          AGE       VERSION           EXTERN
 master.example.com   Ready     infra,master   1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
 node1.example.com    Ready     compute        1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
 node2.example.com    Ready     compute        1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
+node3.example.com    Ready     compute        1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
 ```
 
 3. Run the following to get information about the projects deployed.
@@ -168,4 +170,4 @@ You can change users on the command line using `oc login`. It’s a good idea to
 
 For the remaining labs, we will be using the `user` OpenShift account.
 
-[Lesson Eight: Creating a Sample Application via the Web UI](08-lesson-sample_application.md)
+[Lesson Six: Creating a Sample Application via the Web UI](06-lesson-sample_application.md)
