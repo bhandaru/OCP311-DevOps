@@ -36,7 +36,7 @@ OpenShift’s installation documentation provides examples of the inventory file
 [root@workstation OCP-Workshop]# vi configs/ocp-3.11-workshop
 ```
 
-5. Now edit the inventory file used by OpenShift. Replace the instances of **YOUR_MASTER_PUBLIC_IP_ADDRESS** with the public IP address of your master host, explained above. Open a text editor and edit the ansible hosts file:  
+4. Now edit the inventory file used by OpenShift. Replace the instances of **YOUR_MASTER_PUBLIC_IP_ADDRESS** with the public IP address of your master host, explained above. Open a text editor and edit the ansible hosts file:  
 ```
 [root@workstation OCP-Workshop]# vi configs/ocp-3.11-workshop
 ```
