@@ -36,7 +36,6 @@ master
 node1
 node2
 node3
-docker
 ```
 
 This file allows you to manage your OpenShift environment with ansible. Ansible allows us to easily execute time-consuming commands in parallel during our workshop, among other advantages.
@@ -49,10 +48,6 @@ Ansible requires that hosts be reachable without intervention. For this training
 ```
 If everything is configured properly, you should see something like the following:
 ```
-docker | SUCCESS => {
-    "changed": false, 
-    "ping": "pong"
-}
 node1 | SUCCESS => {
     "changed": false, 
     "ping": "pong"
@@ -76,9 +71,6 @@ master | SUCCESS => {
 ```
 The output should be similar to the sample output below.
 ```
-docker | SUCCESS | rc=0 >>
- 10:53:08 up 49 min,  1 user,  load average: 0.00, 0.01, 0.05
-
 node2 | SUCCESS | rc=0 >>
  10:53:08 up 49 min,  1 user,  load average: 0.55, 0.62, 0.77
 
