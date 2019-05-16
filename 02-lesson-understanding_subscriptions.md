@@ -29,7 +29,41 @@ Resolving deltas: 100% (4076/4076), done.
 
 ```
 [root@workstation ~]$ cd OCPWorkshop
-[root@workstation ~/OCPWorkshop]$
+[root@workstation OCPWorkshop]$
+```
+4. Inspect the contents of the git repo.
+```
+[root@workstation OCP-Workshop]# ls -la
+total 64
+drwxr-xr-x. 8 root root  4096 May 13 23:36 .
+dr-xr-x---. 9 root root  4096 May 14 19:39 ..
+drwxr-xr-x. 2 root root   103 May 15 00:25 configs
+drwxr-xr-x. 4 root root    58 May 13 23:36 documentation
+drwxr-xr-x. 8 root root  4096 May 13 23:36 .git
+-rw-r--r--. 1 root root   458 May 13 23:36 install-docker.sh
+-rw-r--r--. 1 root root  1883 May 13 23:36 install-openshift.sh
+-rw-r--r--. 1 root root 35147 May 13 23:36 LICENSE
+drwxr-xr-x. 3 root root  4096 May 15 00:12 playbooks
+-rw-r--r--. 1 root root  1490 May 13 23:36 README.adoc
+drwxr-xr-x. 2 root root    25 May 13 23:36 screenrc
+drwxr-xr-x. 5 root root    56 May 13 23:36 src
+```
+
+5. Examine the contents ansible playbook for preparing the workstation.  
+```
+[root@workstation OCP-Workshop]# vi playbooks/ocp-3.11-prep-workstation.yml
+```
+
+6. Ensure that ```openshift-ansible``` is being installed as part of the playbook on the last task. If it is not in the list of tasks then add it.
+```
+    - name: "YUM install atomic-openshift-clients plus misc required packages"
+      yum:
+        name=atomic-openshift-clients,openshift-ansible,wget,git,net-tools,bind-utils,yum-utils,iptables-services,bridge-utils,bash-completion,kexec-tools,sos,psacct,nfs-utils,nfs4-acl-tools,lynx,openshift-ansible
+        state=installed
+```
+7. Save and exit the file.
+```
+[root@workstation OCP-Workshop]#
 ```
 
 4. Prepare the cluster by installing all the required packages for OpenShift:
