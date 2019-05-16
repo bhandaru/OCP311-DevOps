@@ -9,21 +9,35 @@ We have pre-arranged the subscriptions used in this class, so we will not be reg
 ## Lab Instructions
 Our first step is to ensure we have the proper software repositories enabled. We start by disabling any existing repositories and adding only the repositories we need. 
 
-1. On your workstation machine, execute the following:
+1. On your workstation machine, execute the following to become a root user:
 ```
-[student@workstation ~]$ sudo ansible all -m shell -a 'yum-config-manager  --disable \* '
-```
-
-2. Enable the needed repos for all OpenShift hosts:
-```
-[student@workstation ~]$ sudo ansible all -m shell -a 'yum-config-manager --enable \ 
-    rhel-7-server-rpms \
-    rhel-7-server-extras-rpms \
-    rhel-7-server-ose-3.10-rpms \
-    rhel-7-fast-datapath-rpms rhel-7-server-ansible-2.4-rpms'
+[student@workstation ~]$ sudo -i '
 ```
 
-3. Confirm the correct repositories have been enabled with the following:
+2. On your workstation clone the git repo ```https://github.com/xtophd/OCP-Workshop.git```
+```
+[root@workstation ~]$ git clone https://github.com/xtophd/OCP-Workshop.git
+Cloning into 'OCP-Workshop'...
+remote: Enumerating objects: 81, done.
+remote: Counting objects: 100% (81/81), done.
+remote: Compressing objects: 100% (81/81), done.
+remote: Total 6659 (delta 39), reused 0 (delta 0), pack-reused 6578
+Receiving objects: 100% (6659/6659), 7.46 MiB | 13.47 MiB/s, done.
+Resolving deltas: 100% (4076/4076), done.
+```
+3. Change current working directory to ```OCPWorkshop```
+
+```
+[root@workstation ~]$ cd OCPWorkshop
+[root@workstation ~/OCPWorkshop]$
+```
+
+4. Prepare the cluster by installing all the required packages for OpenShift:
+```
+[root@workstation ~]$ time ansible-playbook -i configs/configs/ocp-3.11-workshop ./playbooks/ocp-3.11-prep-workstation.yml
+```
+
+5. Confirm the correct repositories have been enabled with the following:
 ```
 [student@workstation ~]$ sudo ansible all -m shell -a 'yum repolist'
 ```
