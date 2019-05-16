@@ -6,4 +6,4 @@ And don't forget about our Interactive Learning Portal here: https://learn.opens
 * Our Interactive Learning Scenarios provide you with a pre-configured OpenShift® instance, accessible from your browser without any downloads or configuration.
 * Use it to experiment, learn OpenShift and see how we can help solve real-world problems.
 
-[Appendix](11-appendix.md)
+[Appendix](09-appendix.md)
