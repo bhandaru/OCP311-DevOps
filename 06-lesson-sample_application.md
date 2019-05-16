@@ -37,4 +37,4 @@ https://github.com/openshift-roadshow/nationalparks-katacoda
 
 Once the build completes, you can click on the first route you created earlier to see your map populated.
 
-[Extra Credit Lesson: Using the CLI to Create Applications](09-lesson-extra_credit.md)
+[Extra Credit Lesson: Using the CLI to Create Applications](07-lesson-extra_credit.md)
