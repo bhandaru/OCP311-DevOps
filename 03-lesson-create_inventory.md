@@ -1,4 +1,4 @@
-# Lesson Five: Creating the OpenShift Ansible Inventory
+# Lesson Three: Creating the OpenShift Ansible Inventory
 
 OpenShift uses a centralized Ansible inventory file to describe, install, and modify the environment. This file details the machines used by OpenShift, their roles, what features are enabled, and many other details. The inventory file is crucial for installation and is also utilized in running environments to make changes. One common task is to add or remove machines after the installation of the environment has been completed.
 
