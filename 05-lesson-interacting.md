@@ -19,7 +19,7 @@ node3.example.com    Ready     compute        1h        v1.10.0+b81c8f8
 [root@master ~]# oc get nodes -o wide
 NAME                 STATUS    ROLES          AGE       VERSION           EXTERNAL-IP   OS-IMAGE                   KERNEL-VERSION              CONTAINER-RUNTIME
 master.example.com   Ready     infra,master   1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
-node1.example.com    Ready     infra .        1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
+node1.example.com    Ready     infra          1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
 node2.example.com    Ready     compute        1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
 node3.example.com    Ready     compute        1h        v1.10.0+b81c8f8   <none>        Red Hat Enterprise Linux   3.10.0-862.9.1.el7.x86_64   docker://1.13.1
 ```
