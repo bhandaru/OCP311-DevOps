@@ -75,7 +75,8 @@ openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 
 5. Create an admin user and password that will allow login and see additional information:
 ```
 [root@master ~]# htpasswd -b /etc/origin/master/htpasswd admin ocpadmin
-Adding password for user admin
+Updating password for user admin
+You have new mail in /var/spool/mail/root
 ```
 A user named `admin` with the password of `ocpadmin` is now created.
 
@@ -131,12 +132,19 @@ kube-system                                        Active
 management-infra                                   Active
 openshift                                          Active
 openshift-ansible-service-broker                   Active
+openshift-console                                  Active
 openshift-infra                                    Active
 openshift-logging                                  Active
+openshift-metrics-server                           Active
+openshift-monitoring                               Active
 openshift-node                                     Active
+openshift-node-problem-detector                    Active
 openshift-sdn                                      Active
+openshift-storage                                  Active
 openshift-template-service-broker                  Active
 openshift-web-console                              Active
+operator-lifecycle-manager                         Active
+
 ```
 
 9. Next, create two user accounts with limited authority. Perform the following on master:
