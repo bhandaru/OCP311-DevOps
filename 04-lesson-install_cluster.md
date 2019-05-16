@@ -88,28 +88,28 @@ node3.example.com          : ok=127  changed=36   unreachable=0    failed=0
 
 
 INSTALLER STATUS ********************************************************************************************************************************************************
-Initialization                 : Complete (0:00:00)
-Health Check                   : Complete (0:00:01)
-etcd Install                   : Complete (0:00:00)
-Node Bootstrap Preparation     : Complete (0:00:00)
-Master Install                 : Complete (0:00:00)
-Master Additional Install      : Complete (0:00:00)
-Node Join                      : Complete (0:00:00)
-Hosted Install                 : Complete (0:00:07)
-Cluster Monitoring Operator    : Complete (0:00:01)
-Web Console Install            : Complete (0:00:01)
-Console Install                : Complete (0:00:01)
-Metrics Install                : Complete (0:00:01)
-metrics-server Install         : Complete (0:00:01)
-Logging Install                : Complete (0:00:01)
-Service Catalog Install        : Complete (0:00:01)
-OLM Install                    : Complete (0:00:00)
-Node Problem Detector Install  : Complete (0:00:00)
+Initialization                 : Complete (0:00:55)
+Health Check                   : Complete (0:00:30)
+Node Bootstrap Preparation     : Complete (0:04:38)
+etcd Install                   : Complete (0:01:37)
+Master Install                 : Complete (0:08:44)
+Master Additional Install      : Complete (0:02:16)
+Node Join                      : Complete (0:01:39)
+GlusterFS Install              : Complete (0:07:15)
+Hosted Install                 : Complete (0:02:24)
+Cluster Monitoring Operator    : Complete (0:01:36)
+Web Console Install            : Complete (0:00:40)
+Console Install                : Complete (0:00:40)
+Metrics Install                : Complete (0:05:59)
+metrics-server Install         : Complete (0:02:34)
+Logging Install                : Complete (0:10:11)
+Service Catalog Install        : Complete (0:09:53)
+OLM Install                    : Complete (0:02:26)
+Node Problem Detector Install  : Complete (0:00:37)
 
-
-real	39m45.512s
-user	14m31.588s
-sys	5m41.406s
+real	65m3.151s
+user	22m14.857s
+sys	8m17.456s
 
 ```
 Errors occurring during the installation will appear in bright red. Provided the installation completed successfully, now proceed to test and interact with the environment.
