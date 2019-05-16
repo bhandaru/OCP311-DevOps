@@ -71,7 +71,7 @@ sys	    0m16.366s
 -i ./configs/ocp-3.11-workshop -f 20 /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml
 ```
 
-4. Run the following command to execute the ansible playbook to install OpenShift cluster.
+6. Run the following command to execute the ansible playbook to install OpenShift cluster.
 ```
 [root@master ~]# time ansible-playbook \
 -i ./configs/ocp-3.11-workshop -f 20 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml
