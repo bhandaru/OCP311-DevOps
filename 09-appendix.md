@@ -7,6 +7,9 @@ Our lab has already populated the hosts with passwordless ssh keys. These keys c
 [student@workstation ~]$ sudo ssh-keygen -b 2048 -t rsa -f /root/.ssh/id_rsa -q -N ""
 [student@workstation ~]$ for i in master node1 node2 node3; do ssh-copy-id root@$i; done
 ```
+**Uninstall OpenShift**
+
+```[root@workstation OCP-Workshop ]# time ansible-playbook -i ./configs/ocp-3.11-workshop -f 20 /usr/share/ansible/openshift-ansible/playbooks/adhoc/uninstall.yml```
 
 **Free up the /dev/vdc disk used by gluster**
 Execute the following from workstation as root
