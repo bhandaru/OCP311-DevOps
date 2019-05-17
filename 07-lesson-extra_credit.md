@@ -48,7 +48,7 @@ to build a new example application in Ruby.
 
 3. Next we will import the first container our project depends on:
 ```
-[root@master ~]# oc new-app openshiftroadshow/parksmap-katacoda:1.0.0
+[root@master ~]# oc new-app bhandaru/parksmap-katacoda:1.0.2
 --> Found Docker image 7722b79 (17 months old) from Docker Hub for "openshiftroadshow/parksmap-katacoda:1.0.0"
 
     Python 3.5
