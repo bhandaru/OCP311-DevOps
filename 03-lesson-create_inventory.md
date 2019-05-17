@@ -30,17 +30,12 @@ OpenShift’s installation documentation provides examples of the inventory file
 
 2. To access the public IP address of the master host, go to the student page and click `Control Center` (Just below your Student number). This link gives you additional access to the training environment. Find the box for `MASTER` and take note of the IP address following `web: `. You will add this IP address to the inventory below.
 
-3. The inventory file resides on the workstation under  ```/root/OCP-Workshop/configs``` folder. Edit ```configs/ocp-3.11-workshop``` inventory file.
 
+3. Now edit the inventory file used by OpenShift. Replace the instances of **YOUR_MASTER_PUBLIC_IP_ADDRESS** with the public IP address of your master host, explained above. Open a text editor and edit the ansible hosts file:  
 ```
 [root@workstation OCP-Workshop]# vi configs/ocp-3.11-workshop
 ```
-
-4. Now edit the inventory file used by OpenShift. Replace the instances of **YOUR_MASTER_PUBLIC_IP_ADDRESS** with the public IP address of your master host, explained above. Open a text editor and edit the ansible hosts file:  
-```
-[root@workstation OCP-Workshop]# vi configs/ocp-3.11-workshop
-```
-Copy and paste the following content into `configs/ocp-3.11-workshop` file. Ensure you have replaced the **YOUR_MASTER_PUBLIC_IP_ADDRESS** with your cluster's master node's public IP address. 
+Replace the contents of ```configs/ocp-3.11-workshop``` with the following content. Ensure you have replaced the **YOUR_MASTER_PUBLIC_IP_ADDRESS** with your cluster's master node's public IP address. 
 
 :information_source: **_Note that you have to replace it in 4 places._**
 
