@@ -5,7 +5,7 @@
 Our lab has already populated the hosts with passwordless ssh keys. These keys can be created easily and distributed to hosts using the `ssh-copy-id` command:
 ```
 [student@workstation ~]$ sudo ssh-keygen -b 2048 -t rsa -f /root/.ssh/id_rsa -q -N ""
-[student@workstation ~]$ for i in master node1 node2; do ssh-copy-id root@$i; done
+[student@workstation ~]$ for i in master node1 node2 node3; do ssh-copy-id root@$i; done
 ```
 
 **Free up the /dev/vdc disk used by gluster**
