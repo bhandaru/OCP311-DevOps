@@ -40,7 +40,7 @@ OpenShift’s installation documentation provides examples of the inventory file
 ```
 [root@workstation OCP-Workshop]# vi configs/ocp-3.11-workshop
 ```
-Copy and paste the following content into `/etc/ansiible/hosts` file. Ensure you have replaced the **YOUR_MASTER_PUBLIC_IP_ADDRESS** with your cluster's master node's public IP address. 
+Copy and paste the following content into `configs/ocp-3.11-workshop` file. Ensure you have replaced the **YOUR_MASTER_PUBLIC_IP_ADDRESS** with your cluster's master node's public IP address. 
 
 :information_source: **_Note that you have to replace it in 4 places._**
 
