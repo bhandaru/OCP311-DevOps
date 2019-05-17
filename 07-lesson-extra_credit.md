@@ -162,4 +162,4 @@ parksmap-katacoda-1-9llrx        1/1       Running     0          13m
 NAME                HOST/PORT                                       PATH      SERVICES            PORT       TERMINATION   WILDCARD
 parksmap-katacoda   parksmap-katacoda-myproject.cloud.example.com             parksmap-katacoda   8080-tcp                 None
 ```
-[Final Thoughts](8-lesson-final_thoughts.md)
+[Final Thoughts](08-lesson-final_thoughts.md)
