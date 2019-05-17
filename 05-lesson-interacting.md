@@ -6,6 +6,8 @@ The prior lessons build on each other. If thereâ€™s an issue along the way, itâ€
 
 1. Log onto master, and run the following to get information about the cluster.
 ```
+[root@workstation OCP-Workshop]# ssh master
+
 [root@master ~]# oc get nodes
 NAME                 STATUS    ROLES          AGE       VERSION
 master.example.com   Ready     infra,master   1h        v1.10.0+b81c8f8
