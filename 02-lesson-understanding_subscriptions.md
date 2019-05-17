@@ -12,7 +12,7 @@ Our first step is to ensure we have the proper software repositories enabled. We
 
 1. On your workstation machine, execute the following to become a root user:
 ```
-[student@workstation ~]$ sudo -i '
+[student@workstation ~]$ sudo -i
 ```
 
 2. On your workstation clone the git repo ```https://github.com/xtophd/OCP-Workshop.git```
