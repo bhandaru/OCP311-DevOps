@@ -24,7 +24,9 @@ Log in with the `user` account you created earlier and perform the following ste
 
 7. Click the route URL, you should see a map in a browser window.
 ---
-_Note: In case the URL does not show the application then restart the router pod in the default project by deleting it._ _Caution: Do not delete the router deployment configuration. Delete the running router pod._
+_Note: In case the URL does not show the application then restart the router pod in the default project by deleting it._ 
+
+_Caution: Do not delete the router deployment configuration. Delete the running router pod._
 ---
 
 8. We will now create a container from existing source code, also called “S2I” or “source to image”. This container will be the backend for our map.
