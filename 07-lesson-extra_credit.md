@@ -24,20 +24,12 @@ https://master.example.com:8443
 ```
 ```
 [userX@workstation ~]# oc projects
-You have one project on this server: "myproject".
-
-Using project "myproject" on server "https://master.example.com:8443".
+You are not a member of any projects. You can request a project to be created with the 'new-project' command.
 ```
-2. Recreate *myproject*. To do this, we will first delete the project created in the previous step:
-```
-[userX@workstation ~]# oc delete project myproject
-project.project.openshift.io "myproject" deleted
-```
-
-Create project `my-project`
+2. Create project `myprojectX`
 ```
 [userX@workstation ~]# oc new-project myprojectX
-Already on project "myproject" on server "https://master.example.com:8443".
+Already on project "myprojectX" on server "https://master.example.com:8443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
