@@ -155,7 +155,7 @@ nationalparks-katacoda-1-build   0/1       Completed   0          1m
 nationalparks-katacoda-1-wlt4z   1/1       Running     0          22s
 parksmap-katacoda-1-9llrx        1/1       Running     0          13m
 ```
-
+ 
 8. After the build is finished, you can input the route created earlier into your browser to view your map.
 ```
 [userX@workstation ~]# oc get routes
