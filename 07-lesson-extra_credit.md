@@ -1,13 +1,13 @@
 # Extra Credit Lesson: Using the CLI to Create Applications
 
-While the previous steps demonstrate how to use the web console, we will now show how the same application can be installed on the command line. We will perform these steps on master.
+This labs steps demonstrate how to use the command line console, we will now show how an application can be installed from the command line. We will perform these steps from a workstation that has the OpenShift client tool installed on it.
 
 ## Lab Instructions
 
-1. Become `user` on master, and verify the environment:
+1. Login as  `userX` on to the cluster:
 ```
-[root@master ~]# oc login -u user
-Logged into "https://master.example.com:8443" as "user" using existing credentials.
+[userX@workstation ~]# oc login https://master.example.com:8443 -u userX
+Logged into "https://master.example.com:8443" as "user1" using existing credentials.
 
 You don't have any projects. You can try to create a new project, by running
 
@@ -15,28 +15,28 @@ You don't have any projects. You can try to create a new project, by running
 ```
 
 ```
-[root@master ~]# oc whoami
-user
+[userX@workstation ~]# oc whoami
+userX
 ```
 ```
-[root@master ~]# oc whoami --show-server
+[userX@workstation ~]# oc whoami --show-server
 https://master.example.com:8443
 ```
 ```
-[root@master ~]# oc projects
+[userX@workstation ~]# oc projects
 You have one project on this server: "myproject".
 
 Using project "myproject" on server "https://master.example.com:8443".
 ```
 2. Recreate *myproject*. To do this, we will first delete the project created in the previous step:
 ```
-[root@master ~]# oc delete project myproject
+[userX@workstation ~]# oc delete project myproject
 project.project.openshift.io "myproject" deleted
 ```
 
 Create project `my-project`
 ```
-[root@master ~]# oc new-project myproject
+[userX@workstation ~]# oc new-project myprojectX
 Already on project "myproject" on server "https://master.example.com:8443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
@@ -48,7 +48,7 @@ to build a new example application in Ruby.
 
 3. Next we will import the first container our project depends on:
 ```
-[root@master ~]# oc new-app bhandaru/parksmap-katacoda:1.0.2
+[userX@workstation ~]# oc new-app bhandaru/parksmap-katacoda:1.0.2
 --> Found Docker image 7722b79 (17 months old) from Docker Hub for "openshiftroadshow/parksmap-katacoda:1.0.0"
 
     Python 3.5
@@ -72,7 +72,7 @@ to build a new example application in Ruby.
     Run 'oc status' to view your app.
 ```
 ```
-[root@master ~]# oc status
+[userX@workstation ~]# oc status
 In project myproject on server https://master.example.com:8443
 
 svc/parksmap-katacoda - 172.30.238.97:8080
@@ -82,7 +82,7 @@ svc/parksmap-katacoda - 172.30.238.97:8080
 
 2 infos identified, use 'oc status -v' to see details.
 
-[root@master ~]# oc get all
+[userX@workstation ~]# oc get all
 NAME                            READY     STATUS    RESTARTS   AGE
 pod/parksmap-katacoda-1-9llrx   1/1       Running   0          46s
 
@@ -101,24 +101,24 @@ imagestream.image.openshift.io/parksmap-katacoda   docker-registry.default.svc:5
 
 4. As suggested once we imported the existing container, we need to add a route:
 ```
-[root@master ~]# oc expose svc/parksmap-katacoda
+[userX@workstation ~]# oc expose svc/parksmap-katacoda
 route "parksmap-katacoda" exposed
 
-[root@master ~]# oc get routes
+[userX@workstation ~]# oc get routes
 NAME                HOST/PORT                                       PATH      SERVICES            PORT       TERMINATION   WILDCARD
 parksmap-katacoda   parksmap-katacoda-myproject.cloud.example.com             parksmap-katacoda   8080-tcp                 None
 ```
 
 5. Note the URL shown via `oc get routes`. That’s the URL our map will be available on. We can list the containers of our application by running the following:
 ```
-[root@master ~]# oc get pods
+[userX@workstation ~]# oc get pods
 NAME                        READY     STATUS    RESTARTS   AGE
 parksmap-katacoda-1-9llrx   1/1       Running   0          7m
 ```
 
 6. Next we need the backend to our application. We will create a container from existing source code. Run the following:
 ```
-[root@master ~]# oc new-app https://github.com/openshift-roadshow/nationalparks-katacoda --name=nationalparks-katacoda
+[userX@workstation ~]# oc new-app openshift/python:latest~https://github.com/openshift-roadshow/nationalparks-katacoda --name=nationalparks-katacoda
 --> Found image 3eb1852 (3 weeks old) in image stream "openshift/python" under tag "3.6" for "python"
 
     Python 3.6
@@ -149,7 +149,7 @@ parksmap-katacoda-1-9llrx   1/1       Running   0          7m
 
 7. We can check the number of containers again:
 ```
-[root@master ~]# oc get pods
+[userX@workstation ~]# oc get pods
 NAME                             READY     STATUS      RESTARTS   AGE
 nationalparks-katacoda-1-build   0/1       Completed   0          1m
 nationalparks-katacoda-1-wlt4z   1/1       Running     0          22s
@@ -158,7 +158,7 @@ parksmap-katacoda-1-9llrx        1/1       Running     0          13m
 
 8. After the build is finished, you can input the route created earlier into your browser to view your map.
 ```
-[root@master ~]# oc get routes
+[userX@workstation ~]# oc get routes
 NAME                HOST/PORT                                       PATH      SERVICES            PORT       TERMINATION   WILDCARD
 parksmap-katacoda   parksmap-katacoda-myproject.cloud.example.com             parksmap-katacoda   8080-tcp                 None
 ```
