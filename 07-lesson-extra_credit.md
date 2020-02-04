@@ -1,4 +1,4 @@
-# Extra Credit Lesson: Using the CLI to Create Applications
+# Using CLI to Create Applications
 
 This labs steps demonstrate how to use the command line console, we will now show how an application can be installed from the command line. We will perform these steps from a workstation that has the OpenShift client tool installed on it.
 
